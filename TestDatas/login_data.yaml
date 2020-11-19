@@ -1,0 +1,37 @@
+success_data:
+      #用户名，密码
+      #username,password
+      - ["admin","111111"]
+
+emptyUser_data:
+      #用户名，密码,期望值
+      #username,password,verify,expected
+    - [" ","111111","1111","请输入您的用户名"]
+
+
+emptyPwd_data:
+      #用户名，密码,期望值
+      #username,password，expected
+    - ["admin"," ","1111","请输入您的密码"]
+
+emptyVerify_data:
+      #用户名，密码,期望值
+      #username,password,verify,expected
+    - ["admin","111111","","请输入验证码"]
+
+errorVerify_data:
+      #用户名，密码,期望值
+      #username,password，expected
+    - ["admin","111111","aaaa","请输入正确的验证码"]
+
+
+errorLogin_data:
+      #用户名，密码,期望值
+      #username,password,verify,expected
+    - ["admin","11111","用户或密码错误"]
+    - ["admi","111111","用户或密码错误"]
+    - ["  admin","111111","用户或密码错误"]
+    - ["admin","   111111","用户或密码错误"]
+
+
+

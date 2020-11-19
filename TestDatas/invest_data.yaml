@@ -1,0 +1,42 @@
+invest_not_100_time:
+      #投资金额，期望值
+      #invest_input,expected
+    - [1,'请输入10的整数倍']
+    - [-1,'请输入10的整数倍']
+    - [101,'请输入10的整数倍']
+    - [99,'请输入10的整数倍']
+    - [100.1,'请输入10的整数倍']
+
+
+invest_without_login:
+      #投资金额，期望值
+      #invest_input,expected
+     - [100,["请输入手机号","请输入密码","登录","登录前程贷"]]
+
+invest_re_no_input:
+      #投资金额，期望值
+      #invest_input,expected
+    - [100,"请正确填写投标金额"]
+
+invest_no_input:
+      #期望值
+      #expected
+    - "true"
+
+
+invest_incorrect_money:
+      #投资金额，期望值
+      #invest_input,expected
+    - [0,"请正确填写投标金额"]
+    - [-100,"请正确填写投标金额"]
+    - [" ","请正确填写投标金额"]
+
+invest_success:
+      #投资金额，期望值
+      #invest_input,expected
+    - [100,['投标成功！','查看并激活']]
+
+
+
+
+

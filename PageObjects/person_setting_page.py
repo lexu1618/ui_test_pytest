@@ -54,6 +54,10 @@ class PersonSettingPage(BasePage):
     _update_prompt=("xpath","//div[text()='更新成功']")
     '''姓名报错提示'''
     _nameError=("css selector","#userName-error")
+    '''手机号码报错提示'''
+    _phoneError=("css selector","#phone-error")
+    '''邮箱报错提示'''
+    _emailError=("css selector","#email-error")
     '''关闭'''
     _close=("css selector","span > a.layui-layer-ico.layui-layer-close.layui-layer-close1")
 
@@ -62,6 +66,9 @@ class PersonSettingPage(BasePage):
 
     '''成功更新个人资料'''
     def update_base_data_success(self,name,sex,birth,phone,email,province,city,district,address):
+        # self.click_element(self._person_setting)
+        # frames = self.driver.find_elements_by_tag_name("iframe")
+        # self.switch_iframe(frames[1])
         self.click_element(self._baseData)
         self.input_name(name)
         self.input_sex(sex)
@@ -72,7 +79,6 @@ class PersonSettingPage(BasePage):
         self.input_address(address)
         self.scrool_to_loc(self._save)
         self.click_element(self._save)
-
         self.click_close()
 
     '''失败更新个人资料'''
@@ -87,8 +93,8 @@ class PersonSettingPage(BasePage):
         self.input_address(address)
         self.scrool_to_loc(self._save)
         self.click_element(self._save)
-        self.back_defaultFrame()
-        self.click_element()
+
+
 
     '''判断更新成功提示是否存在'''
     def isExist_update_prompt(self):
@@ -112,7 +118,26 @@ class PersonSettingPage(BasePage):
             logger.info("姓名错误提示不存在")
             return False
 
+    '''判断手机号码错误提示是否存在'''
+    def isExist_phoneError(self):
+        try:
+            self.wait_eleVisible(self._phoneError)
+            logger.info("手机号码错误提示存在")
+            return True
+        except:
+            logger.info("手机号码错误提示不存在")
+            return False
 
+
+    '''判断邮箱错误提示是否存在'''
+    def isExist_emailError(self):
+        try:
+            self.wait_eleVisible(self._emailError)
+            logger.info("邮箱错误提示存在")
+            return True
+        except:
+            logger.info("邮箱错误提示不存在")
+            return False
 
     def input_name(self,name):
         #清空

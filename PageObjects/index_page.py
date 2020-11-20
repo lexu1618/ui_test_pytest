@@ -26,10 +26,6 @@ class IndexPage(BasePage):
         self.click_element(self._person_setting)
         frames = self.driver.find_elements_by_tag_name("iframe")
         self.switch_iframe(frames[1])
-        # time.sleep(1)
-        # frames = self.driver.find_elements_by_tag_name("iframe")
-        # self.driver.switch_to.frame(frames[1])
-
         return PersonSettingPage(self.driver)
 
     # def into_update_password(self):

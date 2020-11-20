@@ -67,7 +67,7 @@ class BasePage:
 
 
     #等待元素可见
-    def wait_eleVisible(self,locator:tuple, timeout=20, poll_frequency=0.5,doc = '')-> WebElement:
+    def wait_eleVisible(self,locator:tuple, timeout=10, poll_frequency=0.5,doc = '')-> WebElement:
         '''
 
         :param locator: 元素定位，元祖形式（定位类型，定位方式）  (By.XPATH," xxxxxxx")
@@ -92,7 +92,7 @@ class BasePage:
             raise e
 
     #等待元素存在
-    def wait_elePresence(self,locator:tuple,timeout = 20,doc='') -> WebElement:
+    def wait_elePresence(self,locator:tuple,timeout =10,doc='') -> WebElement:
         logger.info("等待元素{0}可见".format(locator))
         try:
             #开始等待的时间

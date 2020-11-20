@@ -1,3 +1,5 @@
+from time import sleep
+
 from PageObjects.login_page import LoginPage
 
 class TestProcuremnetPlan:
@@ -5,7 +7,7 @@ class TestProcuremnetPlan:
 
     def test_add_Check(self,driver,testcase_data):
 
-        '''新增采购计划'''
+        # '''新增采购计划'''
         username = testcase_data["add"]["username"]
         password = testcase_data["add"]["password"]
         title = testcase_data["add"]["title"]
@@ -19,8 +21,19 @@ class TestProcuremnetPlan:
         buy_plan_page = index_page.into_buyPlan()
         buy_plan_page.into_add()
         buy_plan_page.add_plan(title,purchaseTimes,name,model,num,price,brand)
-        # print(buy_plan_page.get_planID())
+
+
+        # for child_frame in driver.find_elements_by_tag_name("iframe"):
+        #     child_frame_id = child_frame.get_attribute("name")
+        #     print("当前frame是{}".format(child_frame_id))
+        # sleep(2)
+
+
+        planID = buy_plan_page.get_planID()
+        sleep(1)
+        index_page.back_defaultFrame()
         index_page.logout()
+
 
         '''1级审批'''
         f1_check_username = testcase_data["check1"]["username"]
@@ -46,3 +59,9 @@ class TestProcuremnetPlan:
         buy_plan_page.check_first()
         index_page.logout()
 
+        '''断言'''
+        index_page = LoginPage(driver).login_success(username, password)
+        buy_plan_page = index_page.into_buyPlan()
+        res = buy_plan_page.select_plan_status(planID)
+        print(res)
+        assert res in "已结束"

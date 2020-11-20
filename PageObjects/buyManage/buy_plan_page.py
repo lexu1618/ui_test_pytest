@@ -49,6 +49,14 @@ class BuyPlanPage(BasePage):
     '''第一条待审核计划'''
     _first_plan = ("css selector","#exampleTable > tbody > tr:nth-child(1) > td:nth-child(3) > a")
 
+    '''计划单号输入框 elements'''
+    _planID_input = ("css selector","#pid")
+
+    '''查询 elements'''
+    _select=("css selector"," button.btn.btn-success")
+
+    '''第一条审批状态'''
+    _check_status=("css selector",".badge_diy")
 
     def check_first(self):
         self.into_related_to_myself()
@@ -117,5 +125,36 @@ class BuyPlanPage(BasePage):
         self.click_element(self._submit)
         sleep(1)
 
+    '''获取新增的采购计划编号'''
     def get_planID(self):
-        return self.get_attribute(self._first_plan,"text")
+        # self.back_defaultFrame()
+        frames1 = self.driver.find_elements_by_tag_name("iframe")
+        self.switch_iframe(frames1[1])
+        self.into_related_to_myself()
+        sleep(1)
+        frames2 = self.driver.find_elements_by_tag_name("iframe")
+        self.switch_iframe(frames2[1])
+        ele = self.get_elements(self._first_plan,0)
+        return ele.get_attribute("text")
+
+    def select_plan_status(self,planID):
+        '''iframe0'''
+        # frames1 = self.driver.find_elements_by_tag_name("iframe")
+        # self.switch_iframe(frames1[1])
+        '''tab_iframe'''
+
+        frames2 = self.driver.find_elements_by_tag_name("iframe")
+        self.switch_iframe(frames2[0])
+
+        # for child_frame in self.driver.find_elements_by_tag_name("iframe"):
+        #     child_frame_id = child_frame.get_attribute("name")
+        #     print("当前frame是{}".format(child_frame_id))
+
+        planID_ele = self.get_elements(self._planID_input,0)
+        planID_ele.send_keys(planID)
+        select_ele = self.get_elements(self._select,0)
+        select_ele.click()
+        # status = self.get_attribute(self._check_status,"text")
+        sleep(1)
+        status = self.driver.find_element_by_css_selector(".badge_diy").text
+        return status

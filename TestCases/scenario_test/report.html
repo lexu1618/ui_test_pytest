@@ -252,7 +252,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>生成报告时间20-Nov-2020 16:38:17 Pytest-Html版本：<a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>生成报告时间20-Nov-2020 22:43:08 Pytest-Html版本：<a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>测试环境</h2>
     <table id="environment">
       <tr>
@@ -274,7 +274,7 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.6</td></tr></table>
     <h2>用例统计</h2>
-    <p>执行了1个测试用例, 历时:37.65秒 . </p>
+    <p>执行了1个测试用例, 历时:10.35秒 . </p>
     <p class="filter" hidden="true">(取消)勾选复选框, 以便筛选测试结果</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 通过</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 跳过</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 失败</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 错误</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 预期失败</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 预期通过</span>, <input checked="true" class="filter" data-test-result="重跑" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="重跑">0 重跑</span>
     <h2>测试结果</h2>
     <table id="results-table">
@@ -290,317 +290,131 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">TestCases/scenario_test/test_procurementPlan.py::TestProcuremnetPlan::test_add_Check</td>
-          <td class="col-duration">32.01</td>
+          <td class="col-duration">4.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">test_procurementPlan.py:29: in test_add_Check<br/>    buy_plan_page = index_page.into_buyPlan()<br/>..\..\PageObjects\index_page.py:38: in into_buyPlan<br/>    self.click_element(self._buyPlan)<br/>..\..\Common\basepage.py:161: in click_element<br/>    raise e<br/>..\..\Common\basepage.py:156: in click_element<br/>    ele.click()<br/>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py:80: in click<br/>    self._execute(Command.CLICK_ELEMENT)<br/>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py:633: in _execute<br/>    return self._parent.execute(command, params)<br/>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py:321: in execute<br/>    self.error_handler.check_response(response)<br/>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py:242: in check_response<br/>    raise exception_class(message, screen, stacktrace)<br/><span class="error">E   selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable</span><br/><span class="error">E     (Session info: chrome=87.0.4280.66)</span><br/>----------------------------- Captured stdout call -----------------------------<br/>token 是24.fcd6030421cf7268f8304cae4fbf736d.2592000.1608453466.282335-22838637
+            <div class="log">test_procurementPlan.py:20: in test_add_Check<br/>    index_page = LoginPage(driver).login_success(username,password)<br/>..\..\PageObjects\login_page.py:40: in login_success<br/>    self.input_verify()<br/>..\..\PageObjects\login_page.py:98: in input_verify<br/>    res = Hanlder_Code(self.driver).test_OCR(self._verify_picture)<br/>..\..\Common\handler_OCR.py:86: in test_OCR<br/>    for words_result in result_json[&quot;words_result&quot;]:<br/><span class="error">E   KeyError: &#x27;words_result&#x27;</span><br/>----------------------------- Captured stdout call -----------------------------<br/>token 是24.377e3613fc20632cbeb8f55188b66528.2592000.1608475385.282335-22838637
 Ocr_host 是https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic
 D:\风机接口框架\ui_test_pytest\Outputs\screenshots\code.png
 imagepath是D:\风机接口框架\ui_test_pytest\Outputs\screenshots\code.png
-result是{&#x27;log_id&#x27;: 7991726072472159476, &#x27;words_result_num&#x27;: 0, &#x27;words_result&#x27;: []}
-token 是24.add4a6a9754d2469399e6b7cc47d686e.2592000.1608453467.282335-22838637
-Ocr_host 是https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic
-D:\风机接口框架\ui_test_pytest\Outputs\screenshots\code.png
-imagepath是D:\风机接口框架\ui_test_pytest\Outputs\screenshots\code.png
-result是{&#x27;log_id&#x27;: 8317137728172696980, &#x27;words_result_num&#x27;: 1, &#x27;words_result&#x27;: [{&#x27;words&#x27;: &#x27;56&#x27;}]}
-当前字符是5
-当前字符是6
-token 是24.048a3058a65b568ac7e1f19aa3f7cee7.2592000.1608453469.282335-22838637
-Ocr_host 是https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic
-D:\风机接口框架\ui_test_pytest\Outputs\screenshots\code.png
-imagepath是D:\风机接口框架\ui_test_pytest\Outputs\screenshots\code.png
-result是{&#x27;log_id&#x27;: 2917043621926834036, &#x27;words_result_num&#x27;: 1, &#x27;words_result&#x27;: [{&#x27;words&#x27;: &#x27;8360&#x27;}]}
-当前字符是8
-当前字符是3
-当前字符是6
-当前字符是0
------------------------------ Captured stderr call -----------------------------<br/>2020-11-20 16:37:45,304 -INFO -日志信息：加载测试地址:http://106.12.13.216:42016/login
-2020-11-20 16:37:45,304 -INFO -日志信息：输入用户名:shh3
-2020-11-20 16:37:45,304 -INFO -日志信息：查找元素清除输入内容
-2020-11-20 16:37:45,305 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;username&#x27;)可见
-2020-11-20 16:37:45,313 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 16:37:45.305893，等待结束时间2020-11-20 16:37:45.313872，等待时长：0
-2020-11-20 16:37:45,319 -INFO -日志信息：(&#x27;name&#x27;, &#x27;username&#x27;) 清除输入内容清除输入内容
-2020-11-20 16:37:45,343 -INFO -日志信息：查找元素
-2020-11-20 16:37:45,344 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;username&#x27;)可见
-2020-11-20 16:37:45,350 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 16:37:45.344804，等待结束时间2020-11-20 16:37:45.350774，等待时长：0
-2020-11-20 16:37:45,354 -INFO -日志信息： 输入元素：(&#x27;name&#x27;, &#x27;username&#x27;)
-2020-11-20 16:37:45,385 -INFO -日志信息：输入密码:111111
-2020-11-20 16:37:45,385 -INFO -日志信息：查找元素清除输入内容
-2020-11-20 16:37:45,386 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;password&#x27;)可见
-2020-11-20 16:37:45,395 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 16:37:45.386678，等待结束时间2020-11-20 16:37:45.395653，等待时长：0
-2020-11-20 16:37:45,401 -INFO -日志信息：(&#x27;name&#x27;, &#x27;password&#x27;) 清除输入内容清除输入内容
-2020-11-20 16:37:45,428 -INFO -日志信息：查找元素
-2020-11-20 16:37:45,428 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;password&#x27;)可见
-2020-11-20 16:37:45,434 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 16:37:45.428566，等待结束时间2020-11-20 16:37:45.434550，等待时长：0
-2020-11-20 16:37:45,443 -INFO -日志信息： 输入元素：(&#x27;name&#x27;, &#x27;password&#x27;)
-2020-11-20 16:37:45,472 -INFO -日志信息：查找元素清除输入内容
-2020-11-20 16:37:45,473 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见
-2020-11-20 16:37:45,480 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见，等待起始时间：2020-11-20 16:37:45.473446，等待结束时间2020-11-20 16:37:45.480427，等待时长：0
-2020-11-20 16:37:45,486 -INFO -日志信息：(&#x27;id&#x27;, &#x27;verify&#x27;) 清除输入内容清除输入内容
-2020-11-20 16:37:46,791 -INFO -日志信息：查找元素
-2020-11-20 16:37:46,791 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-2020-11-20 16:37:46,800 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:46.792961，等待结束时间2020-11-20 16:37:46.800908，等待时长：0
-2020-11-20 16:37:47,106 -INFO -日志信息：查找元素
-2020-11-20 16:37:47,107 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-2020-11-20 16:37:47,113 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:47.107331，等待结束时间2020-11-20 16:37:47.112300，等待时长：0
-2020-11-20 16:37:47,118 -INFO -日志信息：页面:点击元素：(&#x27;id&#x27;, &#x27;imgVerify&#x27;)
-2020-11-20 16:37:48,265 -INFO -日志信息：查找元素
-2020-11-20 16:37:48,265 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-2020-11-20 16:37:48,271 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:48.265944，等待结束时间2020-11-20 16:37:48.271927，等待时长：0
-2020-11-20 16:37:48,541 -INFO -日志信息：查找元素
-2020-11-20 16:37:48,542 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-2020-11-20 16:37:48,547 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:48.542205，等待结束时间2020-11-20 16:37:48.547163，等待时长：0
-2020-11-20 16:37:48,553 -INFO -日志信息：页面:点击元素：(&#x27;id&#x27;, &#x27;imgVerify&#x27;)
-2020-11-20 16:37:49,739 -INFO -日志信息：查找元素
-2020-11-20 16:37:49,740 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-2020-11-20 16:37:49,746 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:49.740053，等待结束时间2020-11-20 16:37:49.746038，等待时长：0
-2020-11-20 16:37:50,199 -INFO -日志信息：输入验证码:8360
-2020-11-20 16:37:50,199 -INFO -日志信息：查找元素
-2020-11-20 16:37:50,199 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见
-2020-11-20 16:37:50,205 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见，等待起始时间：2020-11-20 16:37:50.200737，等待结束时间2020-11-20 16:37:50.205724，等待时长：0
-2020-11-20 16:37:50,211 -INFO -日志信息： 输入元素：(&#x27;id&#x27;, &#x27;verify&#x27;)
-2020-11-20 16:37:50,239 -INFO -日志信息：点击登录按钮
-2020-11-20 16:37:50,240 -INFO -日志信息：查找元素
-2020-11-20 16:37:50,240 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;login&#x27;)可见
-2020-11-20 16:37:50,249 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;login&#x27;)可见，等待起始时间：2020-11-20 16:37:50.240681，等待结束时间2020-11-20 16:37:50.249657，等待时长：0
-2020-11-20 16:37:50,255 -INFO -日志信息：页面:点击元素：(&#x27;id&#x27;, &#x27;login&#x27;)
-2020-11-20 16:37:50,286 -INFO -日志信息：查找元素
-2020-11-20 16:37:50,286 -INFO -日志信息：等待元素(&#x27;xpath&#x27;, &quot;//span[text()=&#x27;购置管理&#x27;]&quot;)可见
-2020-11-20 16:37:51,317 -INFO -日志信息：：元素(&#x27;xpath&#x27;, &quot;//span[text()=&#x27;购置管理&#x27;]&quot;)可见，等待起始时间：2020-11-20 16:37:50.286586，等待结束时间2020-11-20 16:37:51.317434，等待时长：1
-2020-11-20 16:37:51,324 -INFO -日志信息：页面:点击元素：(&#x27;xpath&#x27;, &quot;//span[text()=&#x27;购置管理&#x27;]&quot;)
-2020-11-20 16:37:52,350 -INFO -日志信息：查找元素
-2020-11-20 16:37:52,350 -INFO -日志信息：等待元素(&#x27;xpath&#x27;, &#x27;//*[@id=&quot;side-menu&quot;]/li[2]/ul/li[1]/a&#x27;)可见
-2020-11-20 16:37:52,359 -INFO -日志信息：：元素(&#x27;xpath&#x27;, &#x27;//*[@id=&quot;side-menu&quot;]/li[2]/ul/li[1]/a&#x27;)可见，等待起始时间：2020-11-20 16:37:52.350510，等待结束时间2020-11-20 16:37:52.359486，等待时长：0
-2020-11-20 16:37:52,365 -INFO -日志信息：页面:点击元素：(&#x27;xpath&#x27;, &#x27;//*[@id=&quot;side-menu&quot;]/li[2]/ul/li[1]/a&#x27;)
-2020-11-20 16:37:52,376 -ERROR -日志信息：元素点击失败
+result是{&#x27;error_code&#x27;: 17, &#x27;error_msg&#x27;: &#x27;Open api daily request limit reached&#x27;}
+----------------------------- Captured stderr call -----------------------------<br/>2020-11-20 22:43:04,042 -INFO -日志信息：加载测试地址:http://106.12.13.216:42016/login
+2020-11-20 22:43:04,043 -INFO -日志信息：输入用户名:shh4
+2020-11-20 22:43:04,043 -INFO -日志信息：查找元素清除输入内容
+2020-11-20 22:43:04,044 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;username&#x27;)可见
+2020-11-20 22:43:04,054 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 22:43:04.044105，等待结束时间2020-11-20 22:43:04.054049，等待时长：0
+2020-11-20 22:43:04,060 -INFO -日志信息：(&#x27;name&#x27;, &#x27;username&#x27;) 清除输入内容清除输入内容
+2020-11-20 22:43:04,087 -INFO -日志信息：查找元素
+2020-11-20 22:43:04,087 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;username&#x27;)可见
+2020-11-20 22:43:04,093 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 22:43:04.087959，等待结束时间2020-11-20 22:43:04.093943，等待时长：0
+2020-11-20 22:43:04,099 -INFO -日志信息： 输入元素：(&#x27;name&#x27;, &#x27;username&#x27;)
+2020-11-20 22:43:04,151 -INFO -日志信息：输入密码:111111
+2020-11-20 22:43:04,151 -INFO -日志信息：查找元素清除输入内容
+2020-11-20 22:43:04,151 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;password&#x27;)可见
+2020-11-20 22:43:04,160 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 22:43:04.152786，等待结束时间2020-11-20 22:43:04.160764，等待时长：0
+2020-11-20 22:43:04,165 -INFO -日志信息：(&#x27;name&#x27;, &#x27;password&#x27;) 清除输入内容清除输入内容
+2020-11-20 22:43:04,206 -INFO -日志信息：查找元素
+2020-11-20 22:43:04,206 -INFO -日志信息：等待元素(&#x27;name&#x27;, &#x27;password&#x27;)可见
+2020-11-20 22:43:04,212 -INFO -日志信息：：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 22:43:04.206641，等待结束时间2020-11-20 22:43:04.212626，等待时长：0
+2020-11-20 22:43:04,218 -INFO -日志信息： 输入元素：(&#x27;name&#x27;, &#x27;password&#x27;)
+2020-11-20 22:43:04,259 -INFO -日志信息：查找元素清除输入内容
+2020-11-20 22:43:04,260 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见
+2020-11-20 22:43:04,269 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见，等待起始时间：2020-11-20 22:43:04.260497，等待结束时间2020-11-20 22:43:04.268477，等待时长：0
+2020-11-20 22:43:04,275 -INFO -日志信息：(&#x27;id&#x27;, &#x27;verify&#x27;) 清除输入内容清除输入内容
+2020-11-20 22:43:05,573 -INFO -日志信息：查找元素
+2020-11-20 22:43:05,573 -INFO -日志信息：等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
+2020-11-20 22:43:05,581 -INFO -日志信息：：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 22:43:05.573984，等待结束时间2020-11-20 22:43:05.581963，等待时长：0
 ------------------------------ Captured log call -------------------------------<br/>INFO     root:handler_log.py:53 加载测试地址:http://106.12.13.216:42016/login
-INFO     root:handler_log.py:53 输入用户名:shh3
+INFO     root:handler_log.py:53 输入用户名:shh4
 INFO     root:handler_log.py:53 查找元素清除输入内容
 INFO     root:handler_log.py:53 等待元素(&#x27;name&#x27;, &#x27;username&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 16:37:45.305893，等待结束时间2020-11-20 16:37:45.313872，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 22:43:04.044105，等待结束时间2020-11-20 22:43:04.054049，等待时长：0
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 (&#x27;name&#x27;, &#x27;username&#x27;) 清除输入内容清除输入内容
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/03c457c7-26bf-4f3e-879b-fa51a17abb77/clear {&quot;id&quot;: &quot;03c457c7-26bf-4f3e-879b-fa51a17abb77&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/03c457c7-26bf-4f3e-879b-fa51a17abb77/clear HTTP/1.1&quot; 200 14
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element/fe8f0728-90e5-4216-b729-c4123dd5f26f/clear {&quot;id&quot;: &quot;fe8f0728-90e5-4216-b729-c4123dd5f26f&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element/fe8f0728-90e5-4216-b729-c4123dd5f26f/clear HTTP/1.1&quot; 200 14
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 查找元素
 INFO     root:handler_log.py:53 等待元素(&#x27;name&#x27;, &#x27;username&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 16:37:45.344804，等待结束时间2020-11-20 16:37:45.350774，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;username&#x27;)可见，等待起始时间：2020-11-20 22:43:04.087959，等待结束时间2020-11-20 22:43:04.093943，等待时长：0
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;username\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53  输入元素：(&#x27;name&#x27;, &#x27;username&#x27;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/03c457c7-26bf-4f3e-879b-fa51a17abb77/value {&quot;text&quot;: &quot;shh3&quot;, &quot;value&quot;: [&quot;s&quot;, &quot;h&quot;, &quot;h&quot;, &quot;3&quot;], &quot;id&quot;: &quot;03c457c7-26bf-4f3e-879b-fa51a17abb77&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/03c457c7-26bf-4f3e-879b-fa51a17abb77/value HTTP/1.1&quot; 200 14
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element/fe8f0728-90e5-4216-b729-c4123dd5f26f/value {&quot;text&quot;: &quot;shh4&quot;, &quot;value&quot;: [&quot;s&quot;, &quot;h&quot;, &quot;h&quot;, &quot;4&quot;], &quot;id&quot;: &quot;fe8f0728-90e5-4216-b729-c4123dd5f26f&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element/fe8f0728-90e5-4216-b729-c4123dd5f26f/value HTTP/1.1&quot; 200 14
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 输入密码:111111
 INFO     root:handler_log.py:53 查找元素清除输入内容
 INFO     root:handler_log.py:53 等待元素(&#x27;name&#x27;, &#x27;password&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 16:37:45.386678，等待结束时间2020-11-20 16:37:45.395653，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 22:43:04.152786，等待结束时间2020-11-20 22:43:04.160764，等待时长：0
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 (&#x27;name&#x27;, &#x27;password&#x27;) 清除输入内容清除输入内容
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/57f98faf-cbd7-4e32-97d9-a44af0acd98c/clear {&quot;id&quot;: &quot;57f98faf-cbd7-4e32-97d9-a44af0acd98c&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/57f98faf-cbd7-4e32-97d9-a44af0acd98c/clear HTTP/1.1&quot; 200 14
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element/1c5fe06e-2d2a-450e-882d-699a65964bb4/clear {&quot;id&quot;: &quot;1c5fe06e-2d2a-450e-882d-699a65964bb4&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element/1c5fe06e-2d2a-450e-882d-699a65964bb4/clear HTTP/1.1&quot; 200 14
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 查找元素
 INFO     root:handler_log.py:53 等待元素(&#x27;name&#x27;, &#x27;password&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 16:37:45.428566，等待结束时间2020-11-20 16:37:45.434550，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+INFO     root:handler_log.py:53 ：元素(&#x27;name&#x27;, &#x27;password&#x27;)可见，等待起始时间：2020-11-20 22:43:04.206641，等待结束时间2020-11-20 22:43:04.212626，等待时长：0
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[name=\&quot;password\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53  输入元素：(&#x27;name&#x27;, &#x27;password&#x27;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/57f98faf-cbd7-4e32-97d9-a44af0acd98c/value {&quot;text&quot;: &quot;111111&quot;, &quot;value&quot;: [&quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;], &quot;id&quot;: &quot;57f98faf-cbd7-4e32-97d9-a44af0acd98c&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/57f98faf-cbd7-4e32-97d9-a44af0acd98c/value HTTP/1.1&quot; 200 14
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element/1c5fe06e-2d2a-450e-882d-699a65964bb4/value {&quot;text&quot;: &quot;111111&quot;, &quot;value&quot;: [&quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;], &quot;id&quot;: &quot;1c5fe06e-2d2a-450e-882d-699a65964bb4&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element/1c5fe06e-2d2a-450e-882d-699a65964bb4/value HTTP/1.1&quot; 200 14
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 查找元素清除输入内容
 INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;verify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;verify\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见，等待起始时间：2020-11-20 16:37:45.473446，等待结束时间2020-11-20 16:37:45.480427，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;verify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见，等待起始时间：2020-11-20 22:43:04.260497，等待结束时间2020-11-20 22:43:04.268477，等待时长：0
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;verify\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 (&#x27;id&#x27;, &#x27;verify&#x27;) 清除输入内容清除输入内容
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/c1bed816-a725-443c-a1e0-27e93059b782/clear {&quot;id&quot;: &quot;c1bed816-a725-443c-a1e0-27e93059b782&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/c1bed816-a725-443c-a1e0-27e93059b782/clear HTTP/1.1&quot; 200 14
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element/8dc21c0e-b8a1-4a93-b45c-31a8cb5c8ac1/clear {&quot;id&quot;: &quot;8dc21c0e-b8a1-4a93-b45c-31a8cb5c8ac1&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element/8dc21c0e-b8a1-4a93-b45c-31a8cb5c8ac1/clear HTTP/1.1&quot; 200 14
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 DEBUG    urllib3.connectionpool:connectionpool.py:943 Starting new HTTPS connection (1): aip.baidubce.com:443
 DEBUG    urllib3.connectionpool:connectionpool.py:442 https://aip.baidubce.com:443 &quot;GET /oauth/2.0/token?grant_type=client_credentials&amp;client_id=HLaq5GafbfsuXzVIC2mO0Yjr&amp;client_secret=27j73DFMGXjPIu6vhKTCAhlGSuHFYoQ6 HTTP/1.1&quot; 200 None
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/screenshot {}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/screenshot HTTP/1.1&quot; 200 2414432
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/screenshot {}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;GET /session/b8f31bd1c5e3a8e830aa68153030950a/screenshot HTTP/1.1&quot; 200 2415808
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 INFO     root:handler_log.py:53 查找元素
 INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:46.792961，等待结束时间2020-11-20 16:37:46.800908，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
+INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 22:43:05.573984，等待结束时间2020-11-20 22:43:05.581963，等待时长：0
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;POST /session/b8f31bd1c5e3a8e830aa68153030950a/element HTTP/1.1&quot; 200 88
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect HTTP/1.1&quot; 200 62
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element/5bbf52d9-9e0c-4678-a5a1-c15f07f67915/rect {&quot;id&quot;: &quot;5bbf52d9-9e0c-4678-a5a1-c15f07f67915&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;GET /session/b8f31bd1c5e3a8e830aa68153030950a/element/5bbf52d9-9e0c-4678-a5a1-c15f07f67915/rect HTTP/1.1&quot; 200 62
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect HTTP/1.1&quot; 200 62
+DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63494/session/b8f31bd1c5e3a8e830aa68153030950a/element/5bbf52d9-9e0c-4678-a5a1-c15f07f67915/rect {&quot;id&quot;: &quot;5bbf52d9-9e0c-4678-a5a1-c15f07f67915&quot;}
+DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63494 &quot;GET /session/b8f31bd1c5e3a8e830aa68153030950a/element/5bbf52d9-9e0c-4678-a5a1-c15f07f67915/rect HTTP/1.1&quot; 200 62
 DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
 DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;IHDR&#x27; 16 13
 DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;sRGB&#x27; 41 1
 DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;IDAT&#x27; 54 8192
 DEBUG    urllib3.connectionpool:connectionpool.py:943 Starting new HTTPS connection (1): aip.baidubce.com:443
-DEBUG    urllib3.connectionpool:connectionpool.py:442 https://aip.baidubce.com:443 &quot;POST /rest/2.0/ocr/v1/accurate_basic?access_token=24.fcd6030421cf7268f8304cae4fbf736d.2592000.1608453466.282335-22838637 HTTP/1.1&quot; 200 79
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:47.107331，等待结束时间2020-11-20 16:37:47.112300，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 页面:点击元素：(&#x27;id&#x27;, &#x27;imgVerify&#x27;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/click {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/click HTTP/1.1&quot; 200 14
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    urllib3.connectionpool:connectionpool.py:943 Starting new HTTPS connection (1): aip.baidubce.com:443
-DEBUG    urllib3.connectionpool:connectionpool.py:442 https://aip.baidubce.com:443 &quot;GET /oauth/2.0/token?grant_type=client_credentials&amp;client_id=HLaq5GafbfsuXzVIC2mO0Yjr&amp;client_secret=27j73DFMGXjPIu6vhKTCAhlGSuHFYoQ6 HTTP/1.1&quot; 200 None
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/screenshot {}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/screenshot HTTP/1.1&quot; 200 2415060
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:48.265944，等待结束时间2020-11-20 16:37:48.271927，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect HTTP/1.1&quot; 200 62
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect HTTP/1.1&quot; 200 62
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;IHDR&#x27; 16 13
-DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;sRGB&#x27; 41 1
-DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;IDAT&#x27; 54 8192
-DEBUG    urllib3.connectionpool:connectionpool.py:943 Starting new HTTPS connection (1): aip.baidubce.com:443
-DEBUG    urllib3.connectionpool:connectionpool.py:442 https://aip.baidubce.com:443 &quot;POST /rest/2.0/ocr/v1/accurate_basic?access_token=24.add4a6a9754d2469399e6b7cc47d686e.2592000.1608453467.282335-22838637 HTTP/1.1&quot; 200 88
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:48.542205，等待结束时间2020-11-20 16:37:48.547163，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 页面:点击元素：(&#x27;id&#x27;, &#x27;imgVerify&#x27;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/click {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/click HTTP/1.1&quot; 200 14
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    urllib3.connectionpool:connectionpool.py:943 Starting new HTTPS connection (1): aip.baidubce.com:443
-DEBUG    urllib3.connectionpool:connectionpool.py:442 https://aip.baidubce.com:443 &quot;GET /oauth/2.0/token?grant_type=client_credentials&amp;client_id=HLaq5GafbfsuXzVIC2mO0Yjr&amp;client_secret=27j73DFMGXjPIu6vhKTCAhlGSuHFYoQ6 HTTP/1.1&quot; 200 None
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/screenshot {}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/screenshot HTTP/1.1&quot; 200 2415228
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;imgVerify&#x27;)可见，等待起始时间：2020-11-20 16:37:49.740053，等待结束时间2020-11-20 16:37:49.746038，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;imgVerify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect HTTP/1.1&quot; 200 62
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect {&quot;id&quot;: &quot;8f59db7b-693f-490f-a7a8-6741fe61eca9&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/element/8f59db7b-693f-490f-a7a8-6741fe61eca9/rect HTTP/1.1&quot; 200 62
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;IHDR&#x27; 16 13
-DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;sRGB&#x27; 41 1
-DEBUG    PIL.PngImagePlugin:PngImagePlugin.py:187 STREAM b&#x27;IDAT&#x27; 54 8192
-DEBUG    urllib3.connectionpool:connectionpool.py:943 Starting new HTTPS connection (1): aip.baidubce.com:443
-DEBUG    urllib3.connectionpool:connectionpool.py:442 https://aip.baidubce.com:443 &quot;POST /rest/2.0/ocr/v1/accurate_basic?access_token=24.048a3058a65b568ac7e1f19aa3f7cee7.2592000.1608453469.282335-22838637 HTTP/1.1&quot; 200 90
-INFO     root:handler_log.py:53 输入验证码:8360
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;verify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;verify&#x27;)可见，等待起始时间：2020-11-20 16:37:50.200737，等待结束时间2020-11-20 16:37:50.205724，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;verify\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53  输入元素：(&#x27;id&#x27;, &#x27;verify&#x27;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/c1bed816-a725-443c-a1e0-27e93059b782/value {&quot;text&quot;: &quot;8360&quot;, &quot;value&quot;: [&quot;8&quot;, &quot;3&quot;, &quot;6&quot;, &quot;0&quot;], &quot;id&quot;: &quot;c1bed816-a725-443c-a1e0-27e93059b782&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/c1bed816-a725-443c-a1e0-27e93059b782/value HTTP/1.1&quot; 200 14
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 点击登录按钮
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;id&#x27;, &#x27;login&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;login\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;id&#x27;, &#x27;login&#x27;)可见，等待起始时间：2020-11-20 16:37:50.240681，等待结束时间2020-11-20 16:37:50.249657，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;css selector&quot;, &quot;value&quot;: &quot;[id=\&quot;login\&quot;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 页面:点击元素：(&#x27;id&#x27;, &#x27;login&#x27;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/124791bd-09fe-4de9-8840-847d9c37923d/click {&quot;id&quot;: &quot;124791bd-09fe-4de9-8840-847d9c37923d&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/124791bd-09fe-4de9-8840-847d9c37923d/click HTTP/1.1&quot; 200 14
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;xpath&#x27;, &quot;//span[text()=&#x27;购置管理&#x27;]&quot;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()=&#x27;\u8d2d\u7f6e\u7ba1\u7406&#x27;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 404 1060
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()=&#x27;\u8d2d\u7f6e\u7ba1\u7406&#x27;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;xpath&#x27;, &quot;//span[text()=&#x27;购置管理&#x27;]&quot;)可见，等待起始时间：2020-11-20 16:37:50.286586，等待结束时间2020-11-20 16:37:51.317434，等待时长：1
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()=&#x27;\u8d2d\u7f6e\u7ba1\u7406&#x27;]&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 页面:点击元素：(&#x27;xpath&#x27;, &quot;//span[text()=&#x27;购置管理&#x27;]&quot;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/1abf09d6-0df7-4a76-812a-abb65fa0bba5/click {&quot;id&quot;: &quot;1abf09d6-0df7-4a76-812a-abb65fa0bba5&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/1abf09d6-0df7-4a76-812a-abb65fa0bba5/click HTTP/1.1&quot; 200 14
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 查找元素
-INFO     root:handler_log.py:53 等待元素(&#x27;xpath&#x27;, &#x27;//*[@id=&quot;side-menu&quot;]/li[2]/ul/li[1]/a&#x27;)可见
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@id=\&quot;side-menu\&quot;]/li[2]/ul/li[1]/a&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 ：元素(&#x27;xpath&#x27;, &#x27;//*[@id=&quot;side-menu&quot;]/li[2]/ul/li[1]/a&#x27;)可见，等待起始时间：2020-11-20 16:37:52.350510，等待结束时间2020-11-20 16:37:52.359486，等待时长：0
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element {&quot;using&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@id=\&quot;side-menu\&quot;]/li[2]/ul/li[1]/a&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element HTTP/1.1&quot; 200 88
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-INFO     root:handler_log.py:53 页面:点击元素：(&#x27;xpath&#x27;, &#x27;//*[@id=&quot;side-menu&quot;]/li[2]/ul/li[1]/a&#x27;)
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 POST http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/element/64c13f83-d1d8-45f7-bf9e-245128854545/click {&quot;id&quot;: &quot;64c13f83-d1d8-45f7-bf9e-245128854545&quot;}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;POST /session/3b5d71535593c8670be494305f0fb5c5/element/64c13f83-d1d8-45f7-bf9e-245128854545/click HTTP/1.1&quot; 400 1043
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request
-ERROR    root:handler_log.py:57 元素点击失败
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:388 GET http://127.0.0.1:63161/session/3b5d71535593c8670be494305f0fb5c5/screenshot {}
-DEBUG    urllib3.connectionpool:connectionpool.py:442 http://127.0.0.1:63161 &quot;GET /session/3b5d71535593c8670be494305f0fb5c5/screenshot HTTP/1.1&quot; 200 287728
-DEBUG    selenium.webdriver.remote.remote_connection:remote_connection.py:440 Finished Request</div></td></tr></tbody></table></body></html>
+DEBUG    urllib3.connectionpool:connectionpool.py:442 https://aip.baidubce.com:443 &quot;POST /rest/2.0/ocr/v1/accurate_basic?access_token=24.377e3613fc20632cbeb8f55188b66528.2592000.1608475385.282335-22838637 HTTP/1.1&quot; 200 81</div></td></tr></tbody></table></body></html>

@@ -39,6 +39,11 @@ class LoginPage(BasePage):
         self.input_password(password)
         self.input_verify()
         self.click_login()
+        #如果点击登录后提示验证码错误，就再次获取输入验证码
+        if self.get_errorVerify_login():
+            self.click_element(self._verify_picture)
+            self.input_verify()
+            self.click_login()
         return IndexPage(self.driver)
 
     def login_exception(self, username, password,verify):
@@ -102,9 +107,8 @@ class LoginPage(BasePage):
                     if str.isdigit():
                         print('当前字符是{}'.format(str))
                         dig_sum += 1
-
-                if dig_sum == 4:
-                    break
+                        if dig_sum == 4:
+                            break
         logger.info("输入验证码:{}".format(res))
         self.input_text(self._verify_input,text=res)
         return self
@@ -161,7 +165,6 @@ class LoginPage(BasePage):
     def get_errorVerify_login(self):
         doc = "登录页面-获取登录错误提示信息"
         try:
-
             self.wait_eleVisible(self._verify_error)
             return self.get_text(self._verify_error)
         except:

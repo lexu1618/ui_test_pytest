@@ -67,7 +67,7 @@ class BasePage:
 
 
     #等待元素可见
-    def wait_eleVisible(self,locator:tuple, timeout=10, poll_frequency=0.5,doc = '')-> WebElement:
+    def wait_eleVisible(self,locator:tuple, timeout=5, poll_frequency=0.5,doc = '')-> WebElement:
         '''
 
         :param locator: 元素定位，元祖形式（定位类型，定位方式）  (By.XPATH," xxxxxxx")
@@ -92,7 +92,7 @@ class BasePage:
             raise e
 
     #等待元素存在
-    def wait_elePresence(self,locator:tuple,timeout =10,doc='') -> WebElement:
+    def wait_elePresence(self,locator:tuple,timeout =5,doc='') -> WebElement:
         logger.info("等待元素{0}可见".format(locator))
         try:
             #开始等待的时间
@@ -313,9 +313,10 @@ class BasePage:
         self.driver.delete_cookie(name)
 
 
-    def get_attribute(self, locator, name,doc='') ->str:
+    def get_attribute(self, locator:tuple, name,doc='') ->str:
         """获取某元素某属性"""
-        attribute = self.wait_eleVisible(locator=locator).get_attribute(name)
+
+        attribute = self.get_element(locator).get_attribute(name)
         return attribute
 
 
@@ -587,6 +588,9 @@ class BasePage:
     def back_defaultFrame(self):
         return self.driver.switch_to.default_content()
 
+
+    def back_up_frame(self):
+        return self.driver.switch_to.parent_frame()
 
 
     #截图    只截图浏览器网页的内容，上传窗口也无法截到

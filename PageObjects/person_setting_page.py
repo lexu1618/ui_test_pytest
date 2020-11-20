@@ -52,8 +52,15 @@ class PersonSettingPage(BasePage):
     _pwdConfirm = ("id","confirm_password")
     '''更新成功'''
     _update_prompt=("xpath","//div[text()='更新成功']")
+    '''姓名报错提示'''
+    _nameError=("css selector","#userName-error")
+    '''关闭'''
+    _close=("css selector","span > a.layui-layer-ico.layui-layer-close.layui-layer-close1")
 
-    '''更新个人资料'''
+
+
+
+    '''成功更新个人资料'''
     def update_base_data_success(self,name,sex,birth,phone,email,province,city,district,address):
         self.click_element(self._baseData)
         self.input_name(name)
@@ -66,7 +73,22 @@ class PersonSettingPage(BasePage):
         self.scrool_to_loc(self._save)
         self.click_element(self._save)
 
+        self.click_close()
 
+    '''失败更新个人资料'''
+    def update_base_data_exception(self,name,sex,birth,phone,email,province,city,district,address):
+        self.click_element(self._baseData)
+        self.input_name(name)
+        self.input_sex(sex)
+        self.input_birth(birth)
+        self.input_phone(phone)
+        self.input_email(email)
+        self.input_location(province,city,district)
+        self.input_address(address)
+        self.scrool_to_loc(self._save)
+        self.click_element(self._save)
+        self.back_defaultFrame()
+        self.click_element()
 
     '''判断更新成功提示是否存在'''
     def isExist_update_prompt(self):
@@ -77,6 +99,17 @@ class PersonSettingPage(BasePage):
             return True
         except:
             logger.info("更新成功不存在")
+            return False
+
+
+    '''判断姓名错误提示是否存在'''
+    def isExist_nameError(self):
+        try:
+            self.wait_eleVisible(self._nameError)
+            logger.info("姓名错误提示存在")
+            return True
+        except:
+            logger.info("姓名错误提示不存在")
             return False
 
 
@@ -128,6 +161,11 @@ class PersonSettingPage(BasePage):
     def input_address(self,address):
         self.clear_input(self._address)
         self.input_text(self._address,address)
+
+
+    def click_close(self):
+        self.back_defaultFrame()
+        self.click_element(self._close)
 
 
 

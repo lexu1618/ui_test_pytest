@@ -5,7 +5,9 @@ from Common.handler_OCR import Hanlder_Code
 from Common.handle_yaml import HandleYaml
 from PageObjects.index_page import IndexPage
 
+import urllib3
 
+urllib3.disable_warnings()
 
 class LoginPage(BasePage):
 

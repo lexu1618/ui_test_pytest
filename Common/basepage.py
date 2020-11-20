@@ -120,7 +120,7 @@ class BasePage:
             self.save_screenshot(doc)
             raise e
 
-    #
+
     def get_elements(self,locator:tuple,position=0,doc='')-> WebElement:
 
         logger.info("查找元素{}".format(doc,locator))

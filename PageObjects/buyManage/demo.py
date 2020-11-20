@@ -10,7 +10,7 @@ driver = webdriver.Chrome()
 driver.get("http://106.12.13.216:42016/login")
 driver.maximize_window()
 driver.find_element_by_name("username").clear()
-driver.find_element_by_name("username").send_keys("admin")
+driver.find_element_by_name("username").send_keys("shh3")
 driver.find_element_by_name("password").clear()
 driver.find_element_by_name("password").send_keys("111111")
 driver.find_element_by_id("verify").clear()
@@ -43,48 +43,71 @@ frames = driver.find_elements_by_tag_name("iframe")
 print(frames)
 driver.switch_to.frame(frames[1])
 
+driver.find_element_by_xpath("//a[text()='与我相关']").click()
+sleep(1)
 
-'''切换到内嵌frame'''
+
 frames2 = driver.find_elements_by_tag_name("iframe")
-print(frames2)
-driver.switch_to.frame(frames2[0])
+driver.switch_to.frame(frames2[1])
 sleep(1)
-driver.find_element_by_css_selector("div.columns.pull-right > button.btn.btn-primary").click()
+# driver.find_element_by_css_selector('[onclick="openPurchasePlanCheckDetails(10022,180065,0)"]').click()
 
-frames3 = driver.find_elements_by_tag_name("iframe")
-driver.switch_to.frame(frames3[0])
+driver.find_elements_by_css_selector("#exampleTable > tbody > tr:nth-child(1) > td:nth-child(3) > a")[0].click()
+
+frames4 = driver.find_elements_by_tag_name("iframe")
+driver.switch_to.frame(frames4[0])
 
 sleep(1)
-driver.find_element_by_css_selector("#title").send_keys("采购计划9998")
+driver.find_element_by_xpath("//button[text()='审核']").click()
 
-# eles = driver.find_elements_by_id("type")
-# Select(eles[0]).select_by_index(1)
+frames5 = driver.find_elements_by_tag_name("iframe")
+driver.switch_to.frame(frames5[0])
 
-eles = driver.find_elements_by_id("type_chosen")
-eles[0].click()
-driver.find_element_by_xpath('//li[text()="设备采购"]').click()
-
-driver.find_element_by_id("purchaseTimes").send_keys("2")
-
-driver.find_elements_by_id("purchaseTimesType_chosen")[0].click()
-
-driver.find_element_by_xpath('//li[text()="月"]').click()
-
-driver.find_elements_by_css_selector("button.layui-btn.layui-btn-normal.layui-btn-sm")[0].click()
-
-driver.find_element_by_css_selector("[name='name']").send_keys("设备1")
-
-driver.find_element_by_css_selector("[name='specification']").send_keys("无")
+sleep(1)
+driver.find_element_by_xpath("//button[text()='同意']").click()
 
 
-driver.find_element_by_css_selector("[name='num']").send_keys("2")
-
-driver.find_element_by_css_selector("[name='price']").send_keys("10")
-
-driver.find_element_by_css_selector("[name='brand']").send_keys("SB")
-
-upload = driver.find_element_by_css_selector(".layui-upload-file")
-upload.send_keys(r"D:\requirements.txt")
-
-driver.find_element_by_css_selector("#submit").click()
+'''新增采购计划'''
+# frames2 = driver.find_elements_by_tag_name("iframe")
+# print(frames2)
+# driver.switch_to.frame(frames2[0])
+# sleep(1)
+# driver.find_element_by_css_selector("div.columns.pull-right > button.btn.btn-primary").click()
+#
+# frames3 = driver.find_elements_by_tag_name("iframe")
+# driver.switch_to.frame(frames3[0])
+#
+# sleep(1)
+# driver.find_element_by_css_selector("#title").send_keys("采购计划9998")
+#
+# # eles = driver.find_elements_by_id("type")
+# # Select(eles[0]).select_by_index(1)
+#
+# eles = driver.find_elements_by_id("type_chosen")
+# eles[0].click()
+# driver.find_element_by_xpath('//li[text()="设备采购"]').click()
+#
+# driver.find_element_by_id("purchaseTimes").send_keys("2")
+#
+# driver.find_elements_by_id("purchaseTimesType_chosen")[0].click()
+#
+# driver.find_element_by_xpath('//li[text()="月"]').click()
+#
+# driver.find_elements_by_css_selector("button.layui-btn.layui-btn-normal.layui-btn-sm")[0].click()
+#
+# driver.find_element_by_css_selector("[name='name']").send_keys("设备1")
+#
+# driver.find_element_by_css_selector("[name='specification']").send_keys("无")
+#
+#
+# driver.find_element_by_css_selector("[name='num']").send_keys("2")
+#
+# driver.find_element_by_css_selector("[name='price']").send_keys("10")
+#
+# driver.find_element_by_css_selector("[name='brand']").send_keys("SB")
+#
+# upload = driver.find_element_by_css_selector(".layui-upload-file")
+# upload.send_keys(r"D:\requirements.txt")
+#
+# driver.find_element_by_css_selector("#submit").click()
 

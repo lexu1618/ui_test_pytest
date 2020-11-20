@@ -29,4 +29,6 @@ index_data_dir = os.path.join(base_dir,"TestDatas","index_data.yaml")
 
 common_data_dir = os.path.join(base_dir,"TestDatas","common_data.yaml")
 
-invest_data_dir = os.path.join(base_dir,"TestDatas","invest_data.yaml")
+
+
+scenario_data_dir = os.path.join(base_dir,"TestDatas","scenario_data.yaml")

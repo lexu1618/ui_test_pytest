@@ -315,7 +315,7 @@ class BasePage:
 
     def get_attribute(self, locator, name,doc='') ->str:
         """获取某元素某属性"""
-        attribute = self.wait_eleVisible(locator=locator).get_attribute(name=name)
+        attribute = self.wait_eleVisible(locator=locator).get_attribute(name)
         return attribute
 
 

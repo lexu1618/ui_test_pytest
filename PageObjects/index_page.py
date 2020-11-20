@@ -38,13 +38,15 @@ class IndexPage(BasePage):
         self.click_element(self._buyPlan)
         frames = self.driver.find_elements_by_tag_name("iframe")
         self.switch_iframe(frames[1])
-        '''切换到内嵌frame'''
-        frames2 = self.driver.find_elements_by_tag_name("iframe")
-        self.switch_iframe(frames2[0])
+
+        # '''切换到内嵌frame'''
+        # frames2 = self.driver.find_elements_by_tag_name("iframe")
+        # self.switch_iframe(frames2[0])
         return BuyPlanPage(self.driver)
 
 
-
+    def logout(self):
+        self.click_element(self._logout)
 
 
     # def into_update_password(self):

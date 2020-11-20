@@ -14,6 +14,7 @@ login_url = HandleYaml.read_alone(common_data_dir)["login_url"]
 admin_user = HandleYaml.read_alone(common_data_dir)["username"]
 admin_password = HandleYaml.read_alone(common_data_dir)["password"]
 
+scenario_data = HandleYaml.read_alone(scenario_data_dir)
 
 @pytest.fixture(scope="class")
 def driver():

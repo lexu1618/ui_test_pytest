@@ -3,11 +3,14 @@ import time
 from Common.basepage import BasePage
 from Common.handler_log import logger
 from PageObjects.person_setting_page import PersonSettingPage
-
+from PageObjects.buyManage.buy_plan_page import BuyPlanPage
 
 class IndexPage(BasePage):
     _logout = ('xpath', '//a[text()=" 退出"]')
     _person_setting = ('xpath', '//a[text()=" 个人"]')
+    _buyManage = ("xpath", "//span[text()='购置管理']")
+    _buyPlan=("xpath",'//*[@id="side-menu"]/li[2]/ul/li[1]/a')
+
 
     # 判断退出元素是否存在
     def isExist_logout_ele(self):
@@ -27,6 +30,22 @@ class IndexPage(BasePage):
         frames = self.driver.find_elements_by_tag_name("iframe")
         self.switch_iframe(frames[1])
         return PersonSettingPage(self.driver)
+
+
+    def into_buyPlan(self):
+        self.click_element(self._buyManage)
+        time.sleep(1)
+        self.click_element(self._buyPlan)
+        frames = self.driver.find_elements_by_tag_name("iframe")
+        self.switch_iframe(frames[1])
+        '''切换到内嵌frame'''
+        frames2 = self.driver.find_elements_by_tag_name("iframe")
+        self.switch_iframe(frames2[0])
+        return BuyPlanPage(self.driver)
+
+
+
+
 
     # def into_update_password(self):
     #     # 移动到管理员图标

@@ -537,8 +537,14 @@ class BasePage:
 
 
     #上传操作
-    def upload_file(self):
-        pass
+    def upload_file(self,locator:tuple,file):
+        '''
+        :param locator:
+        :param file:  r"D:\requirements.txt"
+        :return:
+        '''
+        upload = self.get_element(locator)
+        upload.send_keys(file)
 
     #滚动条处理
     def execute_window_scroll(self, x: str, y: str):

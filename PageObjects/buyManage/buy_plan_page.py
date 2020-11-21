@@ -62,7 +62,7 @@ class BuyPlanPage(BasePage):
     _check_status=("css selector",".badge_diy")
 
     '''删除'''
-    _delete = ("css selector",".btn.btn-danger.btn-sm")
+    _delete = ("css selector","[title='删除']")
 
     '''删除--确定'''
     _accept=("css selector",".layui-layer-btn0")
@@ -70,7 +70,6 @@ class BuyPlanPage(BasePage):
 
 
     def check_first_agree(self):
-
         self.into_plan_detail()
         self.into_check_detail()
         self.agree_plan()
@@ -169,6 +168,7 @@ class BuyPlanPage(BasePage):
         # for child_frame in self.driver.find_elements_by_tag_name("iframe"):
         #     child_frame_id = child_frame.get_attribute("name")
         #     print("当前frame是{}".format(child_frame_id))
+
 
         planID_ele = self.get_elements(self._planID_input,0)
         planID_ele.send_keys(planID)

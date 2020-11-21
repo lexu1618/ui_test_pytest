@@ -61,4 +61,25 @@ test_add_second_disagree:
     username: "shh1"
     password: "111111"
 
+test_add_theed_disagree:
+  add:
+    username: 'shh4'
+    password: '111111'
+    title: "采购计划102"
+    purchaseTimes: "1"
+    name: "设备1"
+    model: "大型"
+    num: 1
+    price: 50
+    brand: "zxc"
+  check1:
+    username: "shh3"
+    password: "111111"
+  check2:
+    username: "shh2"
+    password: "111111"
+  check3:
+    username: "shh1"
+    password: "111111"
+
 

@@ -604,8 +604,6 @@ class BasePage:
         #
         # # file_name =name+ "  " + currentTime +".png"     #文件名不能有冒号，空格，否则截图不会生成
         file_name = name +".png"
-
-
         file_dir = os.path.join(screenShot_path,file_name)
         try:
             self.driver.save_screenshot(file_dir)

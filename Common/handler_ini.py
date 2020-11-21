@@ -3,7 +3,7 @@ from configparser import NoSectionError,NoOptionError
 import logging
 
 '''
-如果 inin文件中有特殊字符
+如果 ini文件中有特殊字符
 使用 RawConfigParser()方法进行读取即可，代码如下：
 
 1 config=configparser.RawConfigParser()

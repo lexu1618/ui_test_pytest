@@ -52,17 +52,15 @@ driver.switch_to.frame(frames2[1])
 sleep(1)
 # driver.find_element_by_css_selector('[onclick="openPurchasePlanCheckDetails(10022,180065,0)"]').click()
 
-driver.find_elements_by_css_selector("#exampleTable > tbody > tr:nth-child(1) > td:nth-child(3) > a")[0].click()
 
+'''审批'''
+driver.find_elements_by_css_selector("#exampleTable > tbody > tr:nth-child(1) > td:nth-child(3) > a")[0].click()
 frames4 = driver.find_elements_by_tag_name("iframe")
 driver.switch_to.frame(frames4[0])
-
 sleep(1)
 driver.find_element_by_xpath("//button[text()='审核']").click()
-
 frames5 = driver.find_elements_by_tag_name("iframe")
 driver.switch_to.frame(frames5[0])
-
 sleep(1)
 driver.find_element_by_xpath("//button[text()='同意']").click()
 

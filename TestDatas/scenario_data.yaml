@@ -1,4 +1,16 @@
 #新增采购计划-1级审批-2级审批-3级审批
+check1: &check1
+  username: "shh3"
+  password: "111111"
+check2: &check2
+  username: "shh2"
+  password: "111111"
+check3: &check3
+  username: "shh1"
+  password: "111111"
+
+
+
 test_add_Check:
   add:
     username: 'shh4'
@@ -11,14 +23,20 @@ test_add_Check:
     price: 50
     brand: "zxc"
   check1:
-    username: "shh3"
-    password: "111111"
+      <<: *check1
   check2:
-    username: "shh2"
-    password: "111111"
+      <<: *check2
   check3:
-    username: "shh1"
-    password: "111111"
+      <<: *check3
+#  check1:
+#    username: "shh3"
+#    password: "111111"
+#  check2:
+#    username: "shh2"
+#    password: "111111"
+#  check3:
+#    username: "shh1"
+#    password: "111111"
 
 
 test_add_first_disagree:
@@ -32,13 +50,16 @@ test_add_first_disagree:
     num: 1
     price: 50
     brand: "zxc"
+#  check1:
+#    username: "shh3"
+#    password: "111111"
+#  check2:
+#    username: "shh2"
+#    password: "111111"
   check1:
-    username: "shh3"
-    password: "111111"
+      <<: *check1
   check2:
-    username: "shh2"
-    password: "111111"
-
+      <<: *check2
 
 test_add_second_disagree:
   add:
@@ -51,15 +72,21 @@ test_add_second_disagree:
     num: 1
     price: 50
     brand: "zxc"
+#  check1:
+#    username: "shh3"
+#    password: "111111"
+#  check2:
+#    username: "shh2"
+#    password: "111111"
+#  check3:
+#    username: "shh1"
+#    password: "111111"
   check1:
-    username: "shh3"
-    password: "111111"
+    <<: *check1
   check2:
-    username: "shh2"
-    password: "111111"
+    <<: *check2
   check3:
-    username: "shh1"
-    password: "111111"
+    <<: *check3
 
 test_add_theed_disagree:
   add:
@@ -72,14 +99,19 @@ test_add_theed_disagree:
     num: 1
     price: 50
     brand: "zxc"
+#  check1:
+#    username: "shh3"
+#    password: "111111"
+#  check2:
+#    username: "shh2"
+#    password: "111111"
+#  check3:
+#    username: "shh1"
+#    password: "111111"
   check1:
-    username: "shh3"
-    password: "111111"
+    <<: *check1
   check2:
-    username: "shh2"
-    password: "111111"
+    <<: *check2
   check3:
-    username: "shh1"
-    password: "111111"
-
+    <<: *check3
 

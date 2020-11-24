@@ -1,4 +1,0 @@
-update_pwd:
-      #原密码，新密码，期望值
-      #old_pwd,pwd,expected
-    - ['admin123','','']

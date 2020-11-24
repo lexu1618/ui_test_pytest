@@ -1,4 +1,14 @@
 #新增采购计划-1级审批-2级审批-3级审批
+add: &add
+    username: 'shh4'
+    password: '111111'
+    title: "采购计划102"
+    purchaseTimes: "1"
+    name: "设备1"
+    model: "大型"
+    num: 1
+    price: 50
+    brand: "zxc"
 check1: &check1
   username: "shh3"
   password: "111111"
@@ -10,18 +20,19 @@ check3: &check3
   password: "111111"
 
 
-
+#添加申请-3级审核通过
 test_add_Check:
   add:
-    username: 'shh4'
-    password: '111111'
-    title: "采购计划102"
-    purchaseTimes: "1"
-    name: "设备1"
-    model: "大型"
-    num: 1
-    price: 50
-    brand: "zxc"
+    <<: *add
+#    username: 'shh4'
+#    password: '111111'
+#    title: "采购计划102"
+#    purchaseTimes: "1"
+#    name: "设备1"
+#    model: "大型"
+#    num: 1
+#    price: 50
+#    brand: "zxc"
   check1:
       <<: *check1
   check2:
@@ -38,18 +49,19 @@ test_add_Check:
 #    username: "shh1"
 #    password: "111111"
 
-
+#1级打回
 test_add_first_disagree:
   add:
-    username: 'shh4'
-    password: '111111'
-    title: "采购计划102"
-    purchaseTimes: "1"
-    name: "设备1"
-    model: "大型"
-    num: 1
-    price: 50
-    brand: "zxc"
+    <<: *add
+#    username: 'shh4'
+#    password: '111111'
+#    title: "采购计划102"
+#    purchaseTimes: "1"
+#    name: "设备1"
+#    model: "大型"
+#    num: 1
+#    price: 50
+#    brand: "zxc"
 #  check1:
 #    username: "shh3"
 #    password: "111111"
@@ -61,17 +73,19 @@ test_add_first_disagree:
   check2:
       <<: *check2
 
+#2级打回
 test_add_second_disagree:
   add:
-    username: 'shh4'
-    password: '111111'
-    title: "采购计划102"
-    purchaseTimes: "1"
-    name: "设备1"
-    model: "大型"
-    num: 1
-    price: 50
-    brand: "zxc"
+    <<: *add
+#    username: 'shh4'
+#    password: '111111'
+#    title: "采购计划102"
+#    purchaseTimes: "1"
+#    name: "设备1"
+#    model: "大型"
+#    num: 1
+#    price: 50
+#    brand: "zxc"
 #  check1:
 #    username: "shh3"
 #    password: "111111"
@@ -88,17 +102,19 @@ test_add_second_disagree:
   check3:
     <<: *check3
 
+# 末级打回
 test_add_theed_disagree:
   add:
-    username: 'shh4'
-    password: '111111'
-    title: "采购计划102"
-    purchaseTimes: "1"
-    name: "设备1"
-    model: "大型"
-    num: 1
-    price: 50
-    brand: "zxc"
+    <<: *add
+#    username: 'shh4'
+#    password: '111111'
+#    title: "采购计划102"
+#    purchaseTimes: "1"
+#    name: "设备1"
+#    model: "大型"
+#    num: 1
+#    price: 50
+#    brand: "zxc"
 #  check1:
 #    username: "shh3"
 #    password: "111111"
